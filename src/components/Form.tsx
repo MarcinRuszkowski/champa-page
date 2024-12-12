@@ -35,7 +35,7 @@ export const Form: React.FC<FormProps> = ({ onSubmit }) => {
     <div className="flex items-end justify-center">
       <form
         onSubmit={handleSubmit}
-        className="flex flex-col justify-center gap-5 rounded-lg bg-mDark p-5 text-mPrimary"
+        className="flex flex-col justify-center gap-5 rounded-lg bg-mDark p-5 text-mPrimary w-[350px]"
       >
         {error && <p className="text-red-500 text-sm">{error}</p>}
         <div className="flex flex-col gap-1">
@@ -48,7 +48,7 @@ export const Form: React.FC<FormProps> = ({ onSubmit }) => {
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="bg-mDarkHover rounded-lg px-3 py-1"
+            className="bg-mDarkHover rounded-lg px-3 py-1 w-full"
           />
         </div>
         <div className="flex flex-col gap-1">
@@ -61,7 +61,7 @@ export const Form: React.FC<FormProps> = ({ onSubmit }) => {
             value={subject}
             onChange={(e) => setSubject(e.target.value)}
             required
-            className="bg-mDarkHover rounded-lg px-3 py-1"
+            className="bg-mDarkHover rounded-lg px-3 py-1 w-full"
             placeholder="Reprodukcja"
           />
         </div>
@@ -74,7 +74,7 @@ export const Form: React.FC<FormProps> = ({ onSubmit }) => {
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
-            className="bg-mDarkHover rounded-lg px-3 py-1 h-[100px] max-h-[200px]"
+            className="bg-mDarkHover rounded-lg px-3 py-1 h-[100px] max-h-[200px] w-full"
             placeholder="Jestem zainteresowana reprodukcją..."
           />
         </div>

@@ -21,35 +21,26 @@ export const AboutPage: React.FC = () => {
   ];
 
   return (
-    <div className="flex flex-col gap-5 w-[80%] pt-5">
+    <div className="flex flex-col gap-5 md:w-[85%] p-5 mb-16">
       {cards.map((card, index) => (
         <MagicCard
           key={index}
-          className={`cursor-pointer flex-col items-center bg-mDark text-mPrimary border-0 justify-center text-lg w-[800px] h-fit ${
+          className={`cursor-pointer flex-col items-center bg-mDark text-mPrimary border-0 justify-center text-lg w-fit h-fit ${
             index % 2 === 0 ? "self-end" : "self-start"
           }`}
           gradientColor="#333"
         >
-          <div className="flex items-center justify-between p-5 gap-5">
-            {index % 2 === 0 ? (
-              <>
-                <div>{card.text}</div>
-                <img
-                  src={card.img}
-                  alt=""
-                  className="w-[200px] aspect-square object-cover rounded-lg"
-                />
-              </>
-            ) : (
-              <>
-                <img
-                  src={card.img}
-                  alt=""
-                  className="w-[200px] aspect-square object-cover rounded-lg"
-                />
-                <div>{card.text}</div>
-              </>
-            )}
+          <div
+            className={`flex flex-col  ${
+              index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
+            } items-center p-5 gap-5`}
+          >
+            <img
+              src={card.img}
+              alt=""
+              className="w-[250px] aspect-square object-cover rounded-lg"
+            />
+            <div>{card.text}</div>
           </div>
         </MagicCard>
       ))}

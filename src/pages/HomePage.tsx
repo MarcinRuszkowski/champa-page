@@ -6,7 +6,7 @@ export const HomePage: React.FC = () => {
   return (
     <div className="flex items-center relative">
 
-      <div className="flex flex-row items-center justify-center mt-32">
+      <div className="flex flex-col md:flex-row items-center justify-center md:mt-32">
         <img
           src={logo}
           alt="Logo"

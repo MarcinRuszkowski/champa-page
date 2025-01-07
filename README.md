@@ -10,7 +10,7 @@ This website is dedicated to my stud dog, showcasing his achievements, traits, a
 
 ## Features
 
-- **Dog Prodile**: Detailed description of the dog
+- **Dog Profile**: Detailed description of the dog
 - **Photo Gallery**: A collection of photos of the dog throughout his life and his friends.
 - **Dog Show Achievements**: A detailed history of the dog's participation in dog shows, including awards and grades
 - **Contact Form**: Will work in future (no backend yet)
@@ -25,8 +25,8 @@ This website is dedicated to my stud dog, showcasing his achievements, traits, a
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/MarcinRuszkowski/task-manager.git
-   cd task-manager
+   git clone https://github.com/MarcinRuszkowski/champa-page.git
+   cd champa-page
    ```
 2. **Install dependencies**
 

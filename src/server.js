@@ -36,20 +36,30 @@ app.post("/send-email", async (req, res) => {
       subject: subject,
       text: `From: ${email}\n\n${message}`,
     });
-    res.status(200).json({ message: "Email sent successfully!" });
+    res.status(200).json({ message: "Wysłano wiadomość!" });
 
     // zwrotka
     await transporter.sendMail({
       from: `"Champa" <${process.env.EMAIL_USER}>`,
       to: email, // mail usera
+      replyTo: "void@gmail.com",
       subject: "HAU HAU",
-      text: `Dziękuję za kontakt!\nOtrzymałem Twoją wiadomość i skontaktuję się z Tobą wkrótce.\n\nPapużka`,
+      text: `Dziękuję za kontakt!\nOtrzymałem Twoją wiadomość i skontaktuję się z Tobą wkrótce.\n\nPapużka\n\n---\nTo wiadomość systemowa. Proszę nie odpowiadać na ten email.`,
+      html: `
+        <p>Dziękuję za kontakt!</p>
+        <p>Otrzymałem Twoją wiadomość i skontaktuję się z Tobą wkrótce.</p>
+        <p>Champa</p>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <hr>
+        <p style="color: red; font-style: italic; font-size: 14px; text-place: center; margin-top:0px;">To wiadomość systemowa. Proszę nie odpowiadać na ten email.</p>
+      `,
     });
   } catch (error) {
     console.error("Error sending email:", error);
-    res
-      .status(500)
-      .json({ error: "Failed to send email. Please try again later." });
+    res.status(500).json({ error: "Coś poszło nie tak... Spróbuj ponownie." });
   }
 });
 

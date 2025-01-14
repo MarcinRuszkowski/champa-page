@@ -1,8 +1,8 @@
-export interface EmailData {
+export type EmailData = {
   email: string;
   subject: string;
   message: string;
-}
+};
 
 export const sendEmail = async (
   data: EmailData

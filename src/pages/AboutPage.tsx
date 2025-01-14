@@ -5,7 +5,7 @@ import champ_field from "@/assets/champ_field.jpg";
 export const AboutPage = () => {
   const cards = [
     {
-      text: "Jestem bulterierem miniaturowym, urodziłem się 21 września 2023 roku. Od 4 miesiąca biorę udział w wystawach w których idzie mi conajmniej świetnie. Mam championat w kategori szczeniaczkowej. Mój brat jest czarny i nie ma jaj.",
+      text: "Jestem bulterierem miniaturowym, urodziłem się 21 września 2023 roku. Od 4 miesiąca biorę udział w wystawach w których idzie mi conajmniej świetnie. Mam championat w kategori szczeniaczkowej.",
       img: champ_selfie,
     },
     {

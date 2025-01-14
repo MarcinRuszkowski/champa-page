@@ -8,10 +8,10 @@ export const MainDesc: React.FC = () => {
   return (
     <div className="">
       <FadeText
-        className="text-6xl font-bold text-[#247afb]"
+        className="text-[5rem] font-bold text-[#247afb]"
         direction="up"
         framerProps={{
-          show: { transition: { delay: 0.2 } },
+          show: { transition: { delay: 0.4 } },
         }}
         text="CHAMPA"
       />
@@ -21,11 +21,16 @@ export const MainDesc: React.FC = () => {
           jestem{" "}
           <TextLoop
             className="text-xl text-[#247afb]"
-            children={["REPRODUKTOREM", "CHAMPIONEM", "RUCHACZEM"]}
+            children={[
+              "REPRODUKTOREM",
+              "CHAMPIONEM",
+              "NAJLEPSZY",
+              "PRZYJACIELEM",
+            ]}
           />
           <br />
-          mam juz rok i zaczynam dupczyć. Chętna??? <br /> To ustaw się w
-          kolejce
+          bulterier miniaturowy z Katowic
+          <br /> ZKWP Będzin
         </div>
         <LinkPreview
           className="text-mPrimary text-2xl bg-mDark p-3 w-fit rounded-full"

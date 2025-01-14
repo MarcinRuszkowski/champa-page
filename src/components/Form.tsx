@@ -80,13 +80,13 @@ export const Form: React.FC<FormProps> = ({ onSubmit }) => {
               placeholder="Jestem zainteresowana reprodukcją..."
             />
           </div>
+          <button
+            type="submit"
+            className="bg-mPurple hover:bg-mPurpleHover active:bg-mPurpleActive rounded-lg py-3 px-5 font-medium text-2xl w-fit self-center"
+          >
+            Wyślij
+          </button>
         </form>
-        <button
-          type="submit"
-          className="bg-mPurple rounded-lg py-3 px-5 font-medium text-2xl w-fit"
-        >
-          Wyślij
-        </button>
       </div>
       <Iphone15Pro className="w-auto h-[550px] hidden md:flex">
         <div className="flex flex-col items-center justify-center gap-10 bg-mDark  text-mPrimary w-full h-full">
@@ -135,13 +135,13 @@ export const Form: React.FC<FormProps> = ({ onSubmit }) => {
                 placeholder="Jestem zainteresowana reprodukcją..."
               />
             </div>
+            <button
+              type="submit"
+              className="bg-mPurple hover:bg-mPurpleHover active:bg-mPurpleActive rounded-lg py-3 px-5 font-medium text-2xl w-fit self-center"
+            >
+              Wyślij
+            </button>
           </form>
-          <button
-            type="submit"
-            className="bg-mPurple rounded-lg py-3 px-5 font-medium text-2xl w-fit"
-          >
-            Wyślij
-          </button>
         </div>
       </Iphone15Pro>
       <img src={champa_form} className="rounded-e-xl hidden md:flex" />

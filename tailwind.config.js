@@ -14,6 +14,8 @@ export default {
         mDarkHover: "#333333",
         mPrimary: "#f0e6cc",
         mPurple: "#805ddb",
+        mPurpleActive: "#3e2a65",
+        mPurpleHover: "#5e4099",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

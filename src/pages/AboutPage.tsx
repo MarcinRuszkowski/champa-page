@@ -1,10 +1,8 @@
-import React from "react";
-import { MagicCard } from "@/components/ui/magic-card";
 import champ_ball from "@/assets/champ_ball.jpg";
 import champ_selfie from "@/assets/champ_selfie.jpg";
 import champ_field from "@/assets/champ_field.jpg";
 
-export const AboutPage: React.FC = () => {
+export const AboutPage = () => {
   const cards = [
     {
       text: "Jestem bulterierem miniaturowym, urodziłem się 21 września 2023 roku. Od 4 miesiąca biorę udział w wystawach w których idzie mi conajmniej świetnie. Mam championat w kategori szczeniaczkowej. Mój brat jest czarny i nie ma jaj.",
@@ -23,26 +21,19 @@ export const AboutPage: React.FC = () => {
   return (
     <div className="flex flex-col gap-5 md:w-[85%] p-5 mb-16">
       {cards.map((card, index) => (
-        <MagicCard
+        <div
           key={index}
-          className={`cursor-pointer flex-col items-center bg-mDark text-mPrimary border-0 justify-center text-lg w-fit h-fit ${
-            index % 2 === 0 ? "self-end" : "self-start"
+          className={`flex flex-col md:flex-row items-center rounded-lg bg-mDark text-mPrimary justify-between text-lg h-fit  p-5 gap-5 cursor-pointer  ${
+            index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
           }`}
-          gradientColor="#333"
         >
-          <div
-            className={`flex flex-col  ${
-              index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-            } items-center p-5 gap-5`}
-          >
-            <img
-              src={card.img}
-              alt=""
-              className="w-[250px] aspect-square object-cover rounded-lg"
-            />
-            <div>{card.text}</div>
-          </div>
-        </MagicCard>
+          <img
+            src={card.img}
+            alt={card.img}
+            className="w-[250px] aspect-square object-cover rounded-lg"
+          />
+          <div>{card.text}</div>
+        </div>
       ))}
     </div>
   );

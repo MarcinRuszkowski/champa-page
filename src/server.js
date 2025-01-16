@@ -1,6 +1,5 @@
 import express from "express";
 import nodemailer from "nodemailer";
-import bodyParser from "body-parser";
 import dotenv from "dotenv";
 import cors from "cors";
 
@@ -10,8 +9,8 @@ const app = express();
 const PORT = process.env.PORT || 5000;
 
 app.use(cors());
-app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
 app.post("/send-email", async (req, res) => {
   const { email, subject, message } = req.body;
@@ -31,7 +30,7 @@ app.post("/send-email", async (req, res) => {
 
     await transporter.sendMail({
       from: email,
-      to: "marcin.ruszkowski01@gmail.com",
+      to: process.env.EMAIL_USER,
       replyTo: email,
       subject: subject,
       text: `From: ${email}\n\n${message}`,

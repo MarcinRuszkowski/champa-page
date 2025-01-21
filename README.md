@@ -13,7 +13,7 @@ This website is dedicated to my stud dog, showcasing his achievements, traits, a
 - **Dog Profile**: Detailed description of the dog
 - **Photo Gallery**: A collection of photos of the dog throughout his life and his friends.
 - **Dog Show Achievements**: A detailed history of the dog's participation in dog shows, including awards and grades
-- **Contact Form**: Will work in future (no backend yet)
+- **Contact Form**: Allows users to send messages directly through the site
 
 ## Technologies
 
